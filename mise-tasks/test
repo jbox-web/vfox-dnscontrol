@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#MISE description="Run plugin tests - install and execute tool"
+set -euo pipefail
+
+mise plugin link --force dnscontrol .
+mise cache clear
+mise install dnscontrol@4.36.1
+
+# Capture and display the output while also verifying it
+output=$(mise exec "dnscontrol@4.36.1" -- "dnscontrol" --version)
+echo "dnscontrol output: ${output}"
+
+if echo "${output}" | grep -q '4.36.1'; then
+  echo "✓ Tests passed"
+else
+  echo "✗ Test failed: expected version dnscontrol@4.36.1"
+  exit 1
+fi
