@@ -1,5 +1,7 @@
 # vfox-dnscontrol
 
+> **Deprecated** — this plugin is replaced by [jbox-web/aqua-registry](https://github.com/jbox-web/aqua-registry).
+
 [![CI](https://github.com/jbox-web/vfox-dnscontrol/workflows/CI/badge.svg)](https://github.com/jbox-web/vfox-dnscontrol/actions)
 
 A plugin for the [mise version manager](https://github.com/jdx/mise) to install [dnscontrol](https://github.com/StackExchange/dnscontrol)
